@@ -1,0 +1,82 @@
+<div class="contenedor">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="inscription-form" method="post">
+    <div style="margin-top: 10px;">
+        <div class="title" style="margin-top: 10px;">
+            <h1>Registro de usuario</h1>
+        </div>
+
+        <div class="field" style="margin-top: 48px;">                
+            <label class="field_name">Nombre</label><br>
+            <input class="box" type="text" formControlName="firstname">
+            <div class="error" *ngIf="form.controls['firstname'].errors?.['required'] && form.controls['firstname'].touched">
+                El campo nombre es requerido
+            </div> 
+
+            <div class="error" *ngIf="form.controls['firstname'].errors?.['minlength'] && form.controls['firstname'].touched">
+                El campo debe tener al menos 3 caracteres
+            </div>                 
+        </div>
+        
+        <div class="field">
+            <label class="field_name">Apellido</label><br>
+            <input class="box" type="text" formControlName="lastname">
+            <div class="error" *ngIf="form.controls['lastname'].errors?.['required'] && form.controls['lastname'].touched">
+                El campo Apellido es requerido
+            </div> 
+
+            <div class="error" *ngIf="form.controls['lastname'].errors?.['minlength'] && form.controls['lastname'].touched">
+                El campo debe tener al menos 3 caracteres
+            </div> 
+        </div>
+    
+        <div class="field">
+            <label class="field_name">Fecha de nacimiento</label><br>
+            <input class="box" type="date" formControlName="date_of_birth">
+            <div class="error" *ngIf="form.controls['date_of_birth'].errors?.['required'] && form.controls['date_of_birth'].touched">
+                El campo Fecha de nacimiento es requerido
+            </div> 
+        </div>
+
+        <div class="field">
+            <label class="field_name">Dni</label><br>
+            <input class="box" type="number" formControlName="dni">
+            <div class="error" *ngIf="form.controls['dni'].errors?.['required'] && form.controls['dni'].touched">
+                El campo Dni es requerido
+            </div> 
+        </div>
+
+        <div class="field">
+            <label class="field_name">Correo electrónico</label><br>
+            <input class="box" type="text" formControlName="email">
+            <div class="error" *ngIf="form.controls['email'].errors?.['required'] && form.controls['email'].touched">
+                El campo correo electrónico es requerido
+            </div> 
+
+            <div class="error" *ngIf="form.controls['email'].errors?.['email'] && form.controls['email'].touched">
+                Debe ingresar un email válido
+            </div>                 
+        </div>                             
+      
+        <div class="field">
+            <label class="field_name">Password</label><br>
+            <input class="box" type="password" formControlName="password">
+            <div class="error" *ngIf="form.controls['password'].errors?.['required'] && form.controls['password'].touched">
+                El campo password es requerido
+            </div> 
+            <div class="error" *ngIf="form.controls['password'].errors?.['pattern'] && form.controls['password'].touched">
+                El campo debe tener solo números
+            </div>
+            
+            <div class="error" *ngIf="form.controls['password'].errors?.['minlength'] && form.controls['password'].touched">
+                El campo debe tener al menos 10 digitos 
+            </div> 
+        </div>                                                          
+
+        <div class="field">
+            <button class="submit" type="submit">
+                Registrarme
+            </button>
+        </div>
+    </div>
+    </form>
+</div>  

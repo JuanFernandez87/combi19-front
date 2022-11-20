@@ -1,0 +1,155 @@
+.contenedor{
+    background: #F8F9F9;
+}
+.error{
+    color: tomato;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.title h1{
+    font-family: SharpSansNo1-Bold;
+    color: #02363D;
+    text-align: center;
+}
+
+.field{
+    font-family: SharpSansNo1-Bold;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;    
+}
+
+.field_name{
+    font-family: SharpSansNo1-Bold; 
+    color: #02363D;
+}
+.box{
+    background: #FFFFFF;
+    border: 1px solid #68737D;
+}
+
+.submit{
+    color: white;
+    background: #02363D;
+}
+
+@media screen and (min-width:920px) and (max-width:2400px){
+.contenedor{
+    min-height: 800px;
+    max-width: 463px;
+    margin-left: 101px;
+}
+
+.inscription-form{
+    margin-top: 82px;
+    margin-left: -25px;
+    margin-right: 20px;
+}
+
+.title h1{
+    line-height: 29px;
+    margin-top: 120px;
+    margin-left: 48px;
+    font-size: 23px;
+}
+
+.field{
+    margin-top: 24px;  
+    margin-left: 48px;
+}
+
+.field_name{
+    font-size: 14px;
+    height: 19px;
+}
+.box{
+    width: 368px;
+    height: 50px;
+    margin-top: 1px;
+}
+
+.submit{
+    width: 368px;
+    height: 50px;
+    margin-top: 35px;
+    font-family: SharpSansNo1-Semibold; 
+    font-size: 18px;
+}
+}
+
+@media screen and (min-width:480px) and (max-width:920px){
+    
+.inscription-form{
+    margin-top: 50px;
+}
+
+.title h1{
+    font-size: 20px;
+    text-align: center;
+    line-height: 29px;
+}
+
+.field{
+    margin-top: 15px;   
+    margin-left: 48px;
+}
+
+.field_name{
+    font-size: 14px;
+    height: 19px;
+}
+.box{
+    width: 88%; 
+    height: 28px;
+    margin-top: 1px;
+}
+
+.submit{
+    width: 88%; 
+    height: 28px;
+    margin-top: 10px;
+}
+}
+
+@media screen and (max-width:480px){
+.contenedor{
+    width: 98%; 
+    height: 600px;
+}
+
+.inscription-form{
+    margin-top: 20px;
+}
+
+.title h1{
+    font-size: 15px;
+    text-align: center;
+    line-height: 29px;
+}
+
+.field{
+    margin-top: 15px;   
+    margin-left: 48px;
+}
+
+.field_name{
+    font-size: 14px;
+    height: 19px;
+}
+.box{
+    width: 76%; 
+    height: 28px;
+    margin-top: 1px;
+}
+
+.submit{
+    width: 76%; 
+    height: 28px;
+    margin-top: 10px;
+}
+}
+
+input.ng-invalid.ng-touched, 
+select.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
